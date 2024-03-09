@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #fcfcfc; /* --gray-1: #fcfcfc; */
+
+    /* ! CARD */
+    --card: #0000000f; /* --gray-a3: #0000000f; */
+    --cardHover: #0000001f; /* --gray-a5: #0000001f; */
+
+    /* ! TEXT */
+    --fg: #202020; /* --gray-12: #202020; */
+    --fgLight: #646464; /* --gray-11: #646464; */
+    --fgLighter: #838383; /* --gray-10: #838383; */
+    --fgLightest: #8d8d8d; /* --gray-7: #8d8d8d; */
+
+    /* ! BORDER */
+    --border: #e0e0e0; /* --gray-5: #e0e0e0; */
+    --borderLight: #d9d9d9; /* --gray-6: #d9d9d9; */
+    --borderLighter: #bbbbbb; /* --gray-8: #bbbbbb; */
+    --borderLightest: #f9f9f9; /* --gray-2: #f9f9f9; */
+
+    /* ! ICON */
+    --icon: #646464; /* --gray-11: #b4b4b4; */
+    --iconLight: #838383; /* --gray-10: #838383; */
+    --iconLighter: #e8e8e8; /* --gray-4: #e8e8e8; */
+    --iconLightest: #f9f9f9; /* --gray-2: #f9f9f9; */
+
+    /* ! BADGE Border and foreground */
+    /* * amber, cyan, jade, ruby */
+    --badgeAmber: #f5a623;
+    --badgeCyan: #00b8d9;
+    --badgeRuby: #ff5a5f;
+    --badgeJade: #00c781;
+
+    /* ! Badge Background */
+    --badgeAmberBg: #fff5e5;
+    --badgeCyanBg: #e5f7ff;
+    --badgeRubyBg: #ffe5e5;
+    --badgeJadeBg: #e5fff0;
+  }
+}
+.dark {
+  --background: #111111; /* --gray-1: #202020; */
+
+  /* ! CARD */
+  --card: #ffffff12; /* --gray-a3: #ffffff12; */
+  --cardHover: #ffffff22; /* --gray-a5: #ffffff22; */
+
+  /* ! foreground */
+  --fg: #f0f0f0; /* --gray-12: #f0f0f0; */
+  --fgLight: #b4b4b4; /* --gray-11: #b4b4b4; */
+  --fgLighter: #8d8d8d; /* --gray-9: #8d8d8d; */
+  --fgLightest: #646464; /* --gray-7: #646464; */
+
+  /* ! BORDER */
+  --border: #3a3a3a; /* --gray-5: #3a3a3a; */
+  --borderLight: #2b2b2b; /* --gray-6: #2b2b2b; */
+  --borderLighter: #1f1f1f; /* --gray-8: #1f1f1f; */
+  --borderLightest: #1a1a1a; /* --gray-2: #1a1a1a; */
+
+  /* ! ICON */
+  --icon: #b4b4b4; /* --gray-11: #b4b4b4; */
+  --iconLight: #8d8d8d; /* --gray-10: #8d8d8d; */
+  --iconLighter: #3a3a3a; /* --gray-4: #3a3a3a; */
+  --iconLightest: #1a1a1a; /* --gray-2: #1a1a1a; */
+
+  /* ! BADGE Border and Text */
+  /* * amber, cyan, jade, ruby */
+  --badgeAmber: #f5a623;
+  --badgeCyan: #00b8d9;
+  --badgeRuby: #ff5a5f;
+  --badgeJade: #00c781;
+
+  /* ! Badge Background */
+  --badgeAmberBg: #fff5e5;
+  --badgeCyanBg: #e5f7ff;
+  --badgeRubyBg: #ffe5e5;
+  --badgeJadeBg: #e5fff0;
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
