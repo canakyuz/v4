@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import Link from "next/link";
 import NavLink from "@/components/ui/nav-link";
@@ -10,11 +10,6 @@ type Link = {
  href: string;
 };
 
-interface NavLinkProps {
- onClick: () => void;
- href: string;
-}
-
 const links: Link[] = [
  { label: "About", href: "/about" },
  { label: "Blog", href: "/blog" },
@@ -23,13 +18,16 @@ const links: Link[] = [
 
 const Navigation: React.FC = () => {
  const [isOpen, setIsOpen] = useState(false);
+ const [isMenuOpen, setIsMenuOpen] = useState(false); // Menüyü açık mı kapalı mı kontrolü
 
  const toggleMenu = () => {
   setIsOpen(!isOpen);
+  setIsMenuOpen(!isMenuOpen); // Menüyü açık/kapalı olarak güncelle
  };
 
  const closeMenu = () => {
-  setIsOpen(!isOpen);
+  setIsOpen(false);
+  setIsMenuOpen(false); // Menüyü kapalı olarak güncelle
  };
 
  return (
@@ -69,7 +67,7 @@ const Navigation: React.FC = () => {
     {/* Hamburger Icon for Mobile */}
     <div className={`md:hidden ${isOpen ? "h-screen" : "h-fit"}`}>
      <button onClick={toggleMenu}>
-      <Hamburger size={20} />
+      <Hamburger size={20} toggled={isMenuOpen} />
      </button>
     </div>
     {/* Theme Button */}

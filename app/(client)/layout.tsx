@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-background p-0 m-0 transition duration-200">
         <svg
-          className="pointer-events-none fixed isolate z-50 dark:opacity-90 opacity-40 mix-blend-multiply dark:mix-blend-soft-light top-0 h-screen w-screen"
+          className="pointer-events-none fixed isolate z-50 dark:opacity-90 opacity-40 mix-blend-multiply dark:mix-blend-soft-light top-0 bottom-0 left-0 right-0 h-screen w-screen"
           width="screen"
           height="screen"
         >
