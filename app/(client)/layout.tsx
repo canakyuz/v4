@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Providers from "@/utils/providers";
 import Navigation from "@/components/navigation";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 // Fonts
 import { Outfit } from 'next/font/google'
@@ -56,6 +58,8 @@ export default function RootLayout({
             <Navigation />
             <main className="px-6 pt-16 pb-24 md:pt-20 md:pb-44 w-full mx-auto h-full">
               {children}
+              <Analytics />
+              <SpeedInsights />
             </main>
           </Providers>
         </main>
