@@ -42,8 +42,8 @@ const ProjectPage = async ({ params }: Props) => {
 
 
   return (
-    <section className='w-full font-body text-pretty'>
-      <div className='min-h-screen flex flex-col max-w-4xl mx-auto space-y-4'>
+    <section className='w-full font-body'>
+      <div className='min-h-screen flex flex-col max-w-4xl mx-auto space-y-4 text-pretty'>
         <Header title={projectData.title} />
         <div className='flex md:flex-row flex-col md:items-center gap-4 justify-between'>
           <div className='flex items-center space-x-2 text-sm font-bold'>

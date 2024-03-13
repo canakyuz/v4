@@ -22,7 +22,7 @@ export default async function Home() {
   console.log(projects, "projects");
 
   return (
-    <div className="">
+    <div>
       <Header title="Projects" />
       <div>
         <BentoGrid className="max-w-4xl mx-auto">

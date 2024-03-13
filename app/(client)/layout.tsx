@@ -3,6 +3,7 @@ import Providers from "@/utils/providers";
 import Navigation from "@/components/navigation";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Footer from "@/components/footer"
 
 // Fonts
 import { Outfit } from 'next/font/google'
@@ -53,14 +54,21 @@ export default function RootLayout({
             filter="url(#pedroduarteisalegend)"
           ></rect>
         </svg>
-        <main className="antialiased bg-background/10 max-w-4xl md:py-12 py-24 mx-auto w-full tracking-wide text-text">
+        <main className="antialiased bg-background/10 max-w-4xl md:pt-12 pt-24 pb-0 mx-auto w-full tracking-wide h-screen">
           <Providers>
-            <Navigation />
-            <main className="px-6 w-full mx-auto">
-              {children}
-              <Analytics />
-              <SpeedInsights />
-            </main>
+            <div className="flex flex-col justify-between h-full">
+              {/* Navigation + Body */}
+              <div>
+                <Navigation />
+                <main className="px-6 md:py-12 w-full mx-auto">
+                  {children}
+                  <Analytics />
+                  <SpeedInsights />
+                </main>
+              </div>
+              {/* Footer */}
+              <Footer />
+            </div>
           </Providers>
         </main>
       </body>

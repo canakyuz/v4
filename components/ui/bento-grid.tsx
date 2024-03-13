@@ -53,11 +53,11 @@ export const BentoGridItem = ({ props, className }: BentoGridItemProps) => {
      height={300}
      alt={props.image}
     />
-    <div className="group-hover/bento:translate-x-1 group-hover/bento:-translate-y-1 transition duration-200 z-10 bg-gradient-to-b from-slate-300 to-slate-700 bottom-0 left-0 right-0">
-     <div className="font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
+    <div className="group-hover/bento:translate-x-1 group-hover/bento:-translate-y-1 transition duration-200 z-10 bg-gradient-to-b from-slate-300 to-slate-700">
+     <div className="font-bold text-primary my-1 text-base">
       {props.title}
      </div>
-     <div className="font-normal text-neutral-600 text-sm dark:text-neutral-500">
+     <div className="font-normal text-light text-sm">
       {props.description}
      </div>
      <div className="flex flex-wrap">
