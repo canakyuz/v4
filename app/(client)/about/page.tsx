@@ -3,7 +3,7 @@ import Header from "@/components/ui/header";
 
 export default function About() {
  return (
-  <div className="mt-16">
+  <div className="">
    <Header title="About" />
    <p></p>
   </div>

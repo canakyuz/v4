@@ -9,7 +9,7 @@ import SocialLinks from "./ui/social-links";
 const AboutSection = () => {
     return (
         <header>
-            <div className="grid grid-cols-12 grid-rows-4 gap-2 md:mt-16 mt-8">
+            <div className="grid grid-cols-12 grid-rows-4 gap-2">
                 {/* Image */}
                 <div className="self-center col-span-3 row-span-4">
                     <Image

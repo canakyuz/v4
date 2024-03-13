@@ -46,13 +46,25 @@ export const project = {
       validation: (Rule: Rule) => Rule.max(140).error("Max 140 characters"),
     },
     {
-      name: "code",
-      title: "Code Block",
-      type: "code",
-      options: {
-        withFilename: true, // optional
-        highlightedLines: true, // optional
-      },
+      name: "body",
+      title: "Body",
+      type: "array",
+      of: [
+        { type: "block" },
+        {
+          type: "image",
+          fields: [{ type: "text", name: "alt", title: "Alt" }],
+        },
+        {
+          name: "code",
+          title: "Code Block",
+          type: "code",
+          options: {
+            withFilename: true, // optional
+            highlightedLines: true, // optional
+          },
+        },
+      ],
     },
     {
       name: "skills",

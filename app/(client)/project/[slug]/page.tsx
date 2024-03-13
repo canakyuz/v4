@@ -6,6 +6,7 @@ import { toPlainText } from '@portabletext/react'
 import Image from 'next/image'
 import React from 'react'
 import type { Metadata, ResolvingMetadata } from "next";
+import Header from '@/components/ui/header'
 
 
 type Props = {
@@ -41,13 +42,13 @@ const ProjectPage = async ({ params }: Props) => {
 
 
   return (
-    <section className='w-full mt-16 font-body text-pretty'>
-      <div className='min-h-screen flex flex-col max-w-7xl mx-auto space-y-4'>
-        <h1 className='font-extrabold text-3xl'>{projectData.title}</h1>
-        <div className='flex items-center justify-between'>
+    <section className='w-full font-body text-pretty'>
+      <div className='min-h-screen flex flex-col max-w-4xl mx-auto space-y-4'>
+        <Header title={projectData.title} />
+        <div className='flex md:flex-row flex-col md:items-center gap-4 justify-between'>
           <div className='flex items-center space-x-2 text-sm font-bold'>
             {projectData.skills.map((c: Skill, index: number) => (
-              <Badge key={index} className='rounded-lg p-1'># {c.name}</Badge>
+              <Badge key={index} className='rounded-lg p-1'>#{c.name}</Badge>
             ))}
           </div>
           <div className='flex items-center space-x-2 text-sm text-violet-500'>

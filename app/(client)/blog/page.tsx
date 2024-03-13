@@ -1,6 +1,6 @@
 import Header from "@/components/ui/header";
 import { Post } from "@/utils/interface";
-import { BentoGrid, BentoGridItem } from "@/components/ui/blog-post";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 import { Metadata } from "next";
 import { getPosts } from "@/utils/sanity";
 
@@ -22,7 +22,7 @@ export default async function Home() {
   console.log(posts, "posts");
 
   return (
-    <div className="mt-16">
+    <div className="">
       <Header title="Blog" />
       <div>
         <BentoGrid className="max-w-4xl mx-auto">

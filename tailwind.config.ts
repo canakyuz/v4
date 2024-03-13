@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     colors: {
       background: "var(--background)",
+      ghost: "var(--ghost)",
       card: "var(--card)",
       cardHover: "var(--cardHover)",
       primary: "var(--fg)",

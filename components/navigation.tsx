@@ -31,8 +31,8 @@ const Navigation: React.FC = () => {
  };
 
  return (
-  <nav className="md:sticky fixed top-0 left-0 right-0 py-1 md:mt-2 items-center rounded-lg w-full bg-background/10 shadow-lg z-30 backdrop-blur-xl">
-   <div className="max-w-4xl mx-auto px-4 md:pt-0 pt-[6px] flex justify-between items-start md:items-center">
+  <nav className="fixed top-0 left-0 right-0 py-1 items-center w-full bg-ghost shadow-lg z-30 backdrop-blur-xl">
+   <div className="max-w-4xl mx-auto px-4 flex justify-between items-start md:items-center">
 
     {/* Logo */}
     <div className={`${isOpen ? "h-screen" : "h-fit"}`}>

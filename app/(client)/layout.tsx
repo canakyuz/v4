@@ -33,9 +33,9 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className="antialiased bg-background p-0 m-0 transition duration-200">
+      <body className="antialiased bg-background m-0 transition duration-200 h-screen">
         <svg
-          className="pointer-events-none fixed isolate z-50 dark:opacity-90 opacity-40 mix-blend-multiply dark:mix-blend-soft-light top-0 bottom-0 left-0 right-0 h-screen w-screen"
+          className="pointer-events-none fixed isolate z-50 dark:opacity-90 opacity-70 mix-blend-multiply dark:mix-blend-soft-light top-0 bottom-0 left-0 right-0 h-screen w-screen"
           width="screen"
           height="screen"
         >
@@ -53,10 +53,10 @@ export default function RootLayout({
             filter="url(#pedroduarteisalegend)"
           ></rect>
         </svg>
-        <main className="antialiased bg-background/10 max-w-4xl mx-auto w-full tracking-wide text-text">
+        <main className="antialiased bg-background/10 max-w-4xl md:py-12 py-24 mx-auto w-full tracking-wide text-text">
           <Providers>
             <Navigation />
-            <main className="px-6 pt-16 pb-24 md:pt-20 md:pb-44 w-full mx-auto h-full">
+            <main className="px-6 w-full mx-auto">
               {children}
               <Analytics />
               <SpeedInsights />
