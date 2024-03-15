@@ -38,7 +38,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-background m-0 transition duration-200 h-screen">
         <svg
-          className="pointer-events-none fixed isolate z-50 dark:opacity-90 opacity-70 mix-blend-multiply dark:mix-blend-soft-light top-0 bottom-0 left-0 right-0 h-screen w-screen"
+          className="pointer-events-none fixed isolate z-50 dark:opacity-80 opacity-50 mix-blend-multiply dark:mix-blend-soft-light top-0 bottom-0 left-0 right-0 h-screen w-screen"
           width="screen"
           height="screen"
         >
@@ -58,11 +58,11 @@ export default function RootLayout({
         </svg>
         <main className="antialiased bg-background/10 max-w-4xl md:pt-12 pt-24 pb-0 mx-auto w-full tracking-wide h-screen">
           <Providers>
-            <div className="flex flex-col justify-between h-full">
+            <div className="flex flex-col justify-between h-full md:gap-12 gap-8">
               {/* Navigation + Body */}
               <div>
                 <Navigation />
-                <main className="px-6 md:py-12 w-full mx-auto">
+                <main className="px-6 md:py-14 w-full mx-auto">
                   {children}
                   <Analytics />
                   <SpeedInsights />
