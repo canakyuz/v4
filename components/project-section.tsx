@@ -1,5 +1,4 @@
 "use client";
-import { getProjects } from '@/utils/sanity'
 import { Project } from '@/utils/interface'
 import SubHeader from "./ui/sub-header";
 import * as React from "react"
@@ -12,7 +11,6 @@ import {
  CarouselNext,
  CarouselPrevious,
 } from "@/components/ui/carousel"
-import { project } from '@/sanity/schemas/project';
 
 
 type Props = {
