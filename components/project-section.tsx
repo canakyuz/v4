@@ -24,8 +24,7 @@ const ProjectSection: React.FC<Props> = ({ projects }) => {
  return (
   <section>
    <SubHeader title="Projects" />
-   <Carousel className="w-full"
-   >
+   <Carousel className="w-full">
     <CarouselContent className="-ml-1">
      {projects.map((project: Project, index: number) => (
       <CarouselItem key={project.id} className="pl-1 ">

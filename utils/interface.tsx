@@ -1,4 +1,7 @@
+import { Key } from "react";
+
 export interface Post {
+ id: Key | null | undefined;
  image?: any;
  title: string
  slug: { current: string };
@@ -12,6 +15,7 @@ export interface Post {
 }
 
 export interface Project {
+ id: Key | null | undefined;
  image?: any;
  title: string
  slug: { current: string };
