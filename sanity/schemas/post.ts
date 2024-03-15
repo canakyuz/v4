@@ -60,9 +60,11 @@ export const post = {
           title: "Code Block",
           type: "code",
           options: {
-            withFilename: true, // optional
-            highlightedLines: true, // optional
+            language: "sh",
+            theme: "material",
           },
+          withFilename: true,
+          highlightedLines: true,
         },
       ],
     },

@@ -59,10 +59,13 @@ export const project = {
           name: "code",
           title: "Code Block",
           type: "code",
+
           options: {
-            withFilename: true, // optional
-            highlightedLines: true, // optional
+            language: "sh",
+            theme: "duotoneDark",
           },
+          withFilename: true, // optional
+          highlightedLines: true, // optional
         },
       ],
     },

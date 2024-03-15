@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
  };
 
  return (
-  <nav className="fixed top-0 left-0 right-0 py-1 items-center w-full bg-ghost shadow-lg z-30 backdrop-blur-xl">
+  <nav className="fixed top-0 left-0 right-0 py-1 items-center w-full bg-ghost shadow-lg z-40 backdrop-blur-xl border-b-[1.5px] border-borderLighter">
    <div className="max-w-4xl mx-auto px-4 flex justify-between items-start md:items-center">
 
     {/* Logo */}

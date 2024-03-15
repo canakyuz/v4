@@ -1,30 +1,67 @@
-import { Badge } from '@/components/ui/badge'
-import Header from '@/components/ui/header'
-import { Post, Tag } from '@/utils/interface'
-import { getPost } from '@/utils/sanity'
-import { Metadata, ResolvingMetadata } from 'next'
-import Image from 'next/image'
-import React from 'react'
+import React from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { duotoneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import Image from 'next/image';
+import Header from '@/components/ui/header';
+import { Badge } from '@/components/ui/badge';
+import { Post, Tag } from '@/utils/interface';
+import { getPost } from '@/utils/sanity';
+import type { Metadata, ResolvingMetadata } from 'next';
+const BlockContent = require('@sanity/block-content-to-react');
 
 
 type Props = {
  params: { slug: string }
 }
 
-const BlockContent = require('@sanity/block-content-to-react')
 const serializers = {
  types: {
-  code: (props: any) => (
-   <div className='my-2 bg-ghost border-primary w-full flex-wrap'>
-    <SyntaxHighlighter language={props.node.language} style={oneDark}>
-     {props.node.code}
-    </SyntaxHighlighter>
-   </div>
-  ),
+  code: ({ node }: any) => {
+   const { language, code } = node;
+   return (
+    <div className='w-full flex-wrap'>
+     <SyntaxHighlighter
+      language={language}
+      style={duotoneDark}
+      wrapLines={true}
+      showLineNumbers={true}
+      startingLineNumber={1}
+      lineProps={(lineNumber: number) => {
+       const style: React.CSSProperties = {};
+       if (lineNumber === 2) {
+        style.backgroundColor = '#f7ebc6';
+       }
+       return { style };
+      }}
+      codeTagProps={{ style: { fontFamily: 'inherit' } }}
+      useInlineStyles={true}
+      CodeTag={'code'}
+      lineNumberStyle={{ color: '#e5f7ff80' }}
+      lineNumberContainerStyle={{ width: '2em', userSelect: 'none', color: '#e5f7ff80' }}
+      customStyle={{
+       backgroundColor: '#2d2d2d',
+       borderRadius: 'rounded-xl',
+       padding: 'p-4',
+       margin: 'm-4',
+       border: 'border-primary',
+       overflow: 'overflow-x-auto',
+       width: 'w-full',
+       maxWidth: 'max-w-full',
+       display: 'flex',
+       justifyContent: 'justify-start',
+       alignItems: 'items-start',
+      }}
+
+      wrapLongLines={true}
+     >
+      {code}
+     </SyntaxHighlighter>
+    </div>
+   );
+  },
  },
-}
+};
+
 
 export async function generateMetadata(
  { params }: Props,
@@ -70,7 +107,7 @@ const PostPage = async ({ params }: Props) => {
      </div>
     </div>
     {/* Image */}
-    <Image src={postData.image} alt="" className="w-full object-cover border-2 border-violet-500 h-64 rounded-xl" height={500} width={500} />
+    <Image src={postData.image} alt="" className="w-full object-cover z-0 border-2 border-violet-500 h-64 rounded-xl" height={500} width={500} />
     {/* Body */}
     <div className='prose prose-base prose-slate max-w-full prose-code:ring-lightest dark:prose-invert prose-code prose:text-balance mx-auto w-screen'>
      <BlockContent
@@ -78,6 +115,7 @@ const PostPage = async ({ params }: Props) => {
       projectId="xxxxxxxx"
       dataset="production"
       serializers={serializers}
+      copyButton={true}
      />
     </div>
    </div>

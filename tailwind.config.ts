@@ -37,6 +37,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         body: ["var(--outfit)"],
+        mono: ["var(--font-geist-mono)"],
       },
       animation: {
         scroll:
