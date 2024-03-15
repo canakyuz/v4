@@ -14,6 +14,8 @@ type Props = {
  params: { slug: string }
 }
 
+export const revalidate = 60;
+
 const serializers = {
  types: {
   code: ({ node }: any) => {

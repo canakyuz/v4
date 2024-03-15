@@ -13,13 +13,48 @@ type Props = {
   params: { slug: string };
 };
 
+export const revalidate = 60;
+
 const serializers = {
   types: {
     code: ({ node }: any) => {
       const { language, code } = node;
       return (
-        <div className='my-2 bg-ghost border-primary w-full flex-wrap rounded-xl'>
-          <SyntaxHighlighter language={language} style={duotoneDark}>
+        <div className='w-full flex-wrap'>
+          <SyntaxHighlighter
+            language={language}
+            style={duotoneDark}
+            wrapLines={true}
+            showLineNumbers={true}
+            startingLineNumber={1}
+            lineProps={(lineNumber: number) => {
+              const style: React.CSSProperties = {};
+              if (lineNumber === 2) {
+                style.backgroundColor = '#f7ebc6';
+              }
+              return { style };
+            }}
+            codeTagProps={{ style: { fontFamily: 'inherit' } }}
+            useInlineStyles={true}
+            CodeTag={'code'}
+            lineNumberStyle={{ color: '#e5f7ff80' }}
+            lineNumberContainerStyle={{ width: '2em', userSelect: 'none', color: '#e5f7ff80' }}
+            customStyle={{
+              backgroundColor: '#2d2d2d',
+              borderRadius: 'rounded-xl',
+              padding: 'p-4',
+              margin: 'm-4',
+              border: 'border-primary',
+              overflow: 'overflow-x-auto',
+              width: 'w-full',
+              maxWidth: 'max-w-full',
+              display: 'flex',
+              justifyContent: 'justify-start',
+              alignItems: 'items-start',
+            }}
+
+            wrapLongLines={true}
+          >
             {code}
           </SyntaxHighlighter>
         </div>
