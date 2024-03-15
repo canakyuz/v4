@@ -16,14 +16,12 @@ import { project } from '@/sanity/schemas/project';
 
 
 type Props = {
- props: Project[];
-}
+ projects: Project[];
+};
 
 export const revalidate = 60;
 
-export default async function ProjectSection() {
- const project: Project[] = await getProjects();
- console.log(project, "projects");
+const ProjectSection: React.FC<Props> = ({ projects }) => {
 
  return (
   <section>
@@ -31,9 +29,9 @@ export default async function ProjectSection() {
    <Carousel className="w-full"
    >
     <CarouselContent className="-ml-1">
-     {project.map((post: Project, index: number) => (
-      <CarouselItem className="pl-1 ">
-       <Card key={index} props={post} />
+     {projects.map((project: Project, index: number) => (
+      <CarouselItem key={project.id} className="pl-1 ">
+       <Card key={index} props={project} />
       </CarouselItem>
      ))}
     </CarouselContent>
@@ -44,3 +42,5 @@ export default async function ProjectSection() {
  );
 };
 
+
+export default ProjectSection;
