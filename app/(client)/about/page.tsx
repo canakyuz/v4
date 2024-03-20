@@ -1,5 +1,4 @@
 import Section from "@/components/section";
-import Gallery from "@/components/ui/gallery";
 import Header from "@/components/ui/header";
 import { ConnectLinks } from "@/components/ui/links";
 import Link from "@/components/ui/new-link"
