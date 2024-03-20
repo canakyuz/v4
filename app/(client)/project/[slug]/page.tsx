@@ -87,7 +87,7 @@ const ProjectPage: React.FC<Props> = async ({ params }: Props) => {
   const projectData: Project = await getProject(slug);
 
   return (
-    <section className='w-full font-body'>
+    <section className='w-full font-body animate-in'>
       <div className='min-h-screen flex flex-col max-w-4xl mx-auto space-y-4 text-pretty'>
         {/* Title */}
         <Header title={projectData.title} />

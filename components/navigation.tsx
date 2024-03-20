@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
  };
 
  return (
-  <nav className="fixed top-0 left-0 right-0 py-1 items-center w-full bg-ghost shadow-lg z-40 backdrop-blur-xl border-b-[1.5px] border-borderLighter">
+  <nav className="fixed top-0 left-0 right-0 py-1 items-center w-full bg-ghost shadow-lg z-40 border-b-[1.5px] border-borderLighter backdrop-blur-2xl">
    <div className="max-w-4xl mx-auto px-4 flex justify-between items-start md:items-center">
 
     {/* Logo */}
@@ -54,7 +54,7 @@ const Navigation: React.FC = () => {
      </Link>
     </div>
     {/* Navigation Links */}
-    <div className={`md:flex md:flex-row md:space-x-4 font-body justify-center flex-col md:h-fit h-full text-center justify-items-center  ${isOpen ? "flex h-screen gap-6 transition-all" : "hidden"}`}>
+    <div className={`md:flex md:flex-row md:space-x-4 font-body justify-center flex-col md:h-fit h-full text-center justify-items-center  ${isOpen ? "flex h-screen gap-6 transition-all animate-in" : "hidden"}`}>
      {links.map((link) => (
       <NavLink key={link.href} href={link.href} onClick={closeMenu}>
        {link.label}

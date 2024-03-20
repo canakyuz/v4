@@ -1082,7 +1082,7 @@
   resolved "https://registry.npmjs.org/@sanity/icons/-/icons-1.3.10.tgz"
   integrity sha512-5wVG/vIiGuGrSmq+Bl3PY7XDgQrGv0fyHdJI64FSulnr2wH3NMqZ6C59UFxnrZ93sr7kOt0zQFoNv2lkPBi0Cg==
 
-"@sanity/icons@^2.10.2", "@sanity/icons@^2.10.3", "@sanity/icons@^2.4.1", "@sanity/icons@^2.8", "@sanity/icons@^2.8.0":
+"@sanity/icons@^2.0.0", "@sanity/icons@^2.10.2", "@sanity/icons@^2.10.3", "@sanity/icons@^2.4.1", "@sanity/icons@^2.8", "@sanity/icons@^2.8.0":
   version "2.10.3"
   resolved "https://registry.npmjs.org/@sanity/icons/-/icons-2.10.3.tgz"
   integrity sha512-MH4tSSwkqkPx+L2RjG6/Hcsx80OaESQyl9gBSI4adGh6frZxW8kr4+1GymO5lWoi2IOHgjvxln3XT7BlrRqzLA==
@@ -1253,6 +1253,15 @@
     leven "^3.1.0"
     lodash "^4.17.21"
     object-inspect "^1.6.0"
+
+"@sanity/table@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.npmjs.org/@sanity/table/-/table-1.1.2.tgz"
+  integrity sha512-VTQQYtuYXRYnrwPeQDDYQ0/MExroV4FDeJStpxW3JcYWj+dKvfMfXG5PebzqgbolhAIzgYwcmkOBMXwmwEAN7w==
+  dependencies:
+    "@sanity/icons" "^2.0.0"
+    "@sanity/incompatible-plugin" "^1.0.4"
+    "@sanity/ui" "^1.0.0"
 
 "@sanity/telemetry@^0.7.6":
   version "0.7.7"
@@ -3490,6 +3499,11 @@ electron-to-chromium@^1.4.668:
   version "1.4.680"
   resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.680.tgz"
   integrity sha512-4nToZ5jlPO14W82NkF32wyjhYqQByVaDmLy4J2/tYcAbJfgO2TKJC780Az1V13gzq4l73CJ0yuyalpXvxXXD9A==
+
+embla-carousel-class-names@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.npmjs.org/embla-carousel-class-names/-/embla-carousel-class-names-8.0.0.tgz"
+  integrity sha512-A9GKID8gdZ7sEDawOcJ5zsTg4jU0uoneARYIHQLvW3WP9AfuNLt/73PGYqbeeidLNddVTWWHa2nVSFzYshrfDg==
 
 embla-carousel-react@^8.0.0:
   version "8.0.0"
@@ -6977,7 +6991,7 @@ sanity-diff-patch@^3.0.2:
   dependencies:
     "@sanity/diff-match-patch" "^3.0.0"
 
-sanity@^3, sanity@^3.25, sanity@^3.30.1:
+sanity@^3, sanity@^3.0.0, sanity@^3.25, sanity@^3.30.1:
   version "3.30.1"
   resolved "https://registry.npmjs.org/sanity/-/sanity-3.30.1.tgz"
   integrity sha512-hf/9EwVbNpuVuCQEOn5yWidz0xVTtnarPUCziu5UO6K4FjQjsGQc2GV/FdM2zvW4S6fYUUF0XruxuLkXPtaqgw==

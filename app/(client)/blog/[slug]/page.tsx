@@ -92,7 +92,7 @@ const PostPage = async ({ params }: Props) => {
 
 
  return (
-  <section className='max-w-full font-body '>
+  <section className='max-w-full font-body animate-in'>
    <div className='min-h-screen flex flex-col mx-auto space-y-4 text-pretty'>
     {/* Title */}
     <Header title={postData.title} />

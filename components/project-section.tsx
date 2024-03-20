@@ -22,7 +22,7 @@ export const revalidate = 60;
 const ProjectSection: React.FC<Props> = ({ projects }) => {
 
  return (
-  <section>
+  <section className='animate-in'>
    <SubHeader title="Projects" />
    <Carousel className="w-full">
     <CarouselContent className="-ml-1">

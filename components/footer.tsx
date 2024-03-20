@@ -7,7 +7,7 @@ import { Badge } from "./ui/badge";
 
 const Footer = () => {
  return (
-  <footer className="flex flex-col max-w-4xl py-6 gap-4 text-light font-body text-sm px-6 md:bg-background bg-card">
+  <footer className="flex flex-col max-w-4xl md:py-6 py-3 md:gap-4 gap-2 text-light font-body md:text-sm text-xs px-6 md:bg-background bg-card animate-in">
    <div className="flex flex-row gap-3 ">
     <Link className="hover:text-ruby hover:underline" href="/about">About</Link>
     <Link className="hover:text-ruby hover:underline" href="/blog">Blog</Link>

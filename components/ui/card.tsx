@@ -25,7 +25,7 @@ export const Card = ({ props, className }: BentoGridItemProps) => {
  return (
   <Link href={linkHref}>
    <div className={cn(
-    "row-span-1 rounded-xl font-body group/bento shadow-sm hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 border-card bg-background border-2 justify-between flex flex-col space-y-4",
+    "row-span-1 rounded-xl font-body group/bento shadow-sm transition duration-200 shadow-input h-full dark:shadow-none p-4 border-card bg-background border-2 justify-between flex flex-col space-y-4",
     className
    )}>
     <Image
@@ -35,13 +35,16 @@ export const Card = ({ props, className }: BentoGridItemProps) => {
      height={300}
      alt={props.image}
     />
-    <div className="group-hover/bento:translate-x-1 group-hover/bento:-translate-y-1 transition duration-200 z-10 bg-gradient-to-b from-slate-300 to-slate-700">
-     <div className="font-bold text-primary my-1 text-base">
-      {props.title}
+    <div className="group-hover/bento:translate-x-1 group-hover/bento:-translate-y-1 transition duration-200 z-10 bg-gradient-to-b from-slate-300 to-slate-700 flex flex-col justify-between h-full">
+     <div>
+      <div className="font-bold text-primary my-1 text-base">
+       {props.title}
+      </div>
+      <div className="font-normal text-light text-sm">
+       {props.description}
+      </div>
      </div>
-     <div className="font-normal text-light text-sm">
-      {props.description}
-     </div>
+     {/* Badge */}
      <div className="flex flex-wrap">
       {tagsOrSkills.map((item: Tag | Skill, index: number) => (
        <Badge key={index} className="mt-2 mr-2">{`#${item.name}`}</Badge>

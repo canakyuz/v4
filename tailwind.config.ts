@@ -2,9 +2,9 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,tsx}",
+    "./components/**/*.{js,ts,tsx}",
+    "./app/**/*.{js,ts,tsx}",
   ],
   darkMode: "class",
   theme: {
@@ -34,27 +34,35 @@ const config: Config = {
       ruby_bg: "var(--badgeRubyBg)",
       jade_bg: "var(--badgeJadeBg)",
     },
+    fontFamily: {
+      body: ["var(--outfit)"],
+      mono: ["var(--font-geist-mono)"],
+    },
     extend: {
-      fontFamily: {
-        body: ["var(--outfit)"],
-        mono: ["var(--font-geist-mono)"],
-      },
-      animation: {
-        scroll:
-          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
-      },
       keyframes: {
         scroll: {
           to: {
             transform: "translate(calc(-50% - 0.5rem))",
           },
         },
+        in: {
+          "0%": { transform: "translateY(18px)", opacity: "0%" },
+          "100%": { transform: "translateY(0)", opacity: "100%" },
+        },
+        "in-reverse": {
+          "0%": { transform: "translateY(-18px)", opacity: "0%" },
+          "100%": { transform: "translateY(0px)", opacity: "100%" },
+        },
       },
-      backdropBlur: {
-        noisy: "url('/public/noise.svg')",
+      animation: {
+        in: "in .6s both",
+        "in-reverse": "in-reverse .6s both",
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
   plugins: [require("@tailwindcss/typography"), require("autoprefixer")],
 };
+
 export default config;

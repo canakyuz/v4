@@ -10,18 +10,37 @@ import { structureTool } from "sanity/structure";
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schema } from "./sanity/schema";
 import { codeInput } from "@sanity/code-input";
+import { table } from "@sanity/table";
 
 export default defineConfig({
   basePath: "/studio",
   projectId,
   dataset,
   // Add and edit the content schema in the './sanity/schema' folder
-  schema,
   plugins: [
     codeInput(),
     structureTool(),
     // Vision is a tool that lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
+    table(),
   ],
+  schema: {
+    types: [
+      {
+        name: "product",
+        title: "Product",
+        type: "document",
+        fields: [
+          {
+            // Include the table as a field
+            // Giving it a semantic title
+            name: "sizeChart",
+            title: "Size Chart",
+            type: "table",
+          },
+        ],
+      },
+    ],
+  },
 });

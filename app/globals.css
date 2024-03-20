@@ -93,3 +93,13 @@
 .no-visible-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.animate-in {
+  animation-delay: calc(var(--index) * 130ms);
+}

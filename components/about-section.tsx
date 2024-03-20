@@ -3,12 +3,12 @@
 import Avatar from "../public/avatar.png";
 import Image from "next/image";
 import Link from "next/link";
-import { IconArrowUpRight } from "@tabler/icons-react";
-import SocialLinks from "./ui/social-links";
+import { SocialLinks } from "./ui/links";
+
 
 const AboutSection = () => {
     return (
-        <header>
+        <header className="animate-in">
             <div className="grid grid-cols-12 grid-rows-4 gap-2">
                 {/* Image */}
                 <div className="self-center col-span-3 row-span-4">
@@ -23,7 +23,7 @@ const AboutSection = () => {
                 </div>
                 {/* Name */}
                 <div className="self-center col-span-9 col-start-4 sm:row-span-1 row-span-2">
-                    <h1 className="sm:text-4xl text-3xl font-semibold">
+                    <h1 className="md:text-4xl text-3xl font-semibold">
                         Bekircan Akyüz
                     </h1>
                 </div>

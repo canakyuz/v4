@@ -12,7 +12,7 @@ export default async function Home() {
   const posts: Post[] = await getPosts();
   const projects: Project[] = await getProjects();
   return (
-    <main className='w-full font-body flex flex-col md:gap-12 gap-8'>
+    <main className='w-full font-body flex flex-col md:gap-12 gap-8 animate-in my-12'>
       <AboutSection />
       <TechArea />
       <BlogSection posts={posts} />

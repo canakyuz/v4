@@ -20,12 +20,12 @@ export const revalidate = 60;
 
 const BlogSection: React.FC<Props> = ({ posts }) => {
  return (
-  <section>
+  <section className='animate-in'>
    <SubHeader title="Blog" />
    <Carousel className="w-full">
     <CarouselContent className="-ml-1">
      {posts.map((post: Post, index: number) => (
-      <CarouselItem key={post._id} className="pl-1">
+      <CarouselItem key={post.id} className="pl-1 my-1">
        <Card key={index} props={post} />
       </CarouselItem>
      ))}
