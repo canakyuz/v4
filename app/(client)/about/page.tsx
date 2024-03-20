@@ -39,7 +39,7 @@ export default function About() {
     <Section heading="About" headingAlignment="left">
      <div className="flex flex-col gap-4 text-light">
       <p>
-       Hi, I'm Can Akyuz, currently based in Izmir. I'm a software engineer and designer actively seeking new opportunities in the New York City.
+       Hi, I`&apos;`m Can Akyuz, currently based in Izmir. I`&apos;`m a software engineer and designer actively seeking new opportunities in the New York City.
       </p>
       <p>
        Passionate about crafting delightful user experiences and tackling complex challenges, I bring a diverse skill set to the table. With a strong background in frontend development and design, I thrive in dynamic environments where creativity meets technology.
@@ -48,7 +48,7 @@ export default function About() {
        As a co-founder of <a className="text-primary" href="https://www.bento.studio/" target="_blank" rel="noopener noreferrer">Bento</a>, a platform empowering creators to build and sell digital products, I have honed my entrepreneurial spirit and problem-solving abilities.
       </p>
       <p>
-       Driven by a desire to expand my horizons and contribute to innovative projects, I am eager to connect with like-minded professionals and explore opportunities for collaboration. If you're interested in discussing potential roles or partnerships, feel free to reach out to me at <a className="text-primary" href="mailto:canakyuz23@gmail.com"> canakyuz23@gmail.com </a>.
+       Driven by a desire to expand my horizons and contribute to innovative projects, I am eager to connect with like-minded professionals and explore opportunities for collaboration. If you`&apos;`re interested in discussing potential roles or partnerships, feel free to reach out to me at <a className="text-primary" href="mailto:canakyuz23@gmail.com"> canakyuz23@gmail.com </a>.
       </p>
 
      </div>
