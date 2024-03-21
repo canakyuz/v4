@@ -4,6 +4,13 @@ import { ConnectLinks } from "@/components/ui/links";
 import Link from "@/components/ui/new-link"
 import Image from "next/image";
 import Gallery from "./components/gallery";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+ title: "About | Can Akyuz",
+ description: "Learn more about Can Akyuz, a software engineer and designer based in Izmir.",
+};
 
 
 export default function About() {
@@ -52,9 +59,7 @@ export default function About() {
       <p>
        Passionate about crafting delightful user experiences and tackling complex challenges, I bring a diverse skill set to the table. With a strong background in frontend development and design, I thrive in dynamic environments where creativity meets technology.
       </p>
-      <p>
-       As a co-founder of <a className="text-primary" href="https://www.bento.studio/" target="_blank" rel="noopener noreferrer">Bento</a>, a platform empowering creators to build and sell digital products, I have honed my entrepreneurial spirit and problem-solving abilities.
-      </p>
+
       <p>
        Driven by a desire to expand my horizons and contribute to innovative projects, I am eager to connect with like-minded professionals and explore opportunities for collaboration. If you&apos;re interested in discussing potential roles or partnerships, feel free to reach out to me.
       </p>
