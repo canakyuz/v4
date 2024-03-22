@@ -13,6 +13,7 @@ import { codeInput } from "@sanity/code-input";
 import { table } from "@sanity/table";
 
 export default defineConfig({
+  schema,
   basePath: "/studio",
   projectId,
   dataset,
@@ -25,22 +26,4 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
     table(),
   ],
-  schema: {
-    types: [
-      {
-        name: "product",
-        title: "Product",
-        type: "document",
-        fields: [
-          {
-            // Include the table as a field
-            // Giving it a semantic title
-            name: "sizeChart",
-            title: "Size Chart",
-            type: "table",
-          },
-        ],
-      },
-    ],
-  },
 });
