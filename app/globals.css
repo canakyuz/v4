@@ -39,7 +39,7 @@
     /* ! Badge Background */
     --badgeAmberBg: #fff5e5;
     --badgeCyanBg: #e5f7ff;
-    --badgeRubyBg: #ffe5e5;
+    --badgeRubyBg: #ff5a5f30;
     --badgeJadeBg: #e5fff0;
   }
 }
@@ -80,7 +80,7 @@
   /* ! Badge Background */
   --badgeAmberBg: #fff5e5;
   --badgeCyanBg: #e5f7ff;
-  --badgeRubyBg: #ffe5e5;
+  --badgeRubyBg: #ff5a5f30;
   --badgeJadeBg: #e5fff0;
 }
 

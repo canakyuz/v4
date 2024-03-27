@@ -25,11 +25,11 @@ const ProjectSection: React.FC<Props> = ({ projects }) => {
  return (
   <Section heading="Projects" headingAlignment='left'>
    <section className='animate-in'>
-    <Carousel className="w-full">
-     <CarouselContent className="ml-1">
+    <Carousel className="w-full flex flex-col">
+     <CarouselContent className="-ml-1">
       {projects.map((project: Project, index: number) => (
-       <CarouselItem key={project.id} className="pl-1 ">
-        <Card key={index} props={project} />
+       <CarouselItem key={project.id} className="p-2 my-1">
+        <Card key={project.id} props={project} />
        </CarouselItem>
       ))}
      </CarouselContent>

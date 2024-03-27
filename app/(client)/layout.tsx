@@ -58,7 +58,7 @@ export default function RootLayout({
         </svg>
         <main className="antialiased bg-background/10 max-w-4xl md:pt-12 pt-24 pb-0 mx-auto w-full tracking-wide h-screen">
           <Providers>
-            <div className="flex flex-col justify-between h-full md:gap-12 gap-8">
+            <div className="flex flex-col justify-between h-full md:gap-12 gap-8 bg-background">
               {/* Navigation + Body */}
               <div>
                 <Navigation />
