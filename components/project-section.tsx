@@ -11,6 +11,7 @@ import {
  CarouselNext,
  CarouselPrevious,
 } from "@/components/ui/carousel"
+import Section from './section';
 
 
 type Props = {
@@ -22,20 +23,21 @@ export const revalidate = 60;
 const ProjectSection: React.FC<Props> = ({ projects }) => {
 
  return (
-  <section className='animate-in'>
-   <SubHeader title="Projects" />
-   <Carousel className="w-full">
-    <CarouselContent className="-ml-1">
-     {projects.map((project: Project, index: number) => (
-      <CarouselItem key={project.id} className="pl-1 ">
-       <Card key={index} props={project} />
-      </CarouselItem>
-     ))}
-    </CarouselContent>
-    <CarouselPrevious />
-    <CarouselNext />
-   </Carousel>
-  </section>
+  <Section heading="Projects" headingAlignment='left'>
+   <section className='animate-in'>
+    <Carousel className="w-full">
+     <CarouselContent className="ml-1">
+      {projects.map((project: Project, index: number) => (
+       <CarouselItem key={project.id} className="pl-1 ">
+        <Card key={index} props={project} />
+       </CarouselItem>
+      ))}
+     </CarouselContent>
+     <CarouselPrevious />
+     <CarouselNext />
+    </Carousel>
+   </section>
+  </Section>
  );
 };
 

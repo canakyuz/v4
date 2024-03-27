@@ -4,6 +4,7 @@ import Avatar from "../public/avatar.png";
 import Image from "next/image";
 import Link from "next/link";
 import { SocialLinks } from "./ui/links";
+import Section from "./section";
 
 
 const AboutSection = () => {

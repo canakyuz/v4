@@ -1256,14 +1256,14 @@
     semver "^7.3.5"
     validate-npm-package-name "^3.0.0"
 
-"@sanity/client@^6.12.3", "@sanity/client@^6.12.4", "@sanity/client@^6.14.4", "@sanity/client@^6.15.0", "@sanity/client@^6.15.2", "@sanity/client@^6.15.3":
-  version "6.15.3"
-  resolved "https://registry.npmjs.org/@sanity/client/-/client-6.15.3.tgz"
-  integrity sha512-7P6OMUeXr87aDzWHlXhP4QXYm02f9jc8f5xr736Er3RybuhSg+ZnetoxBFWhzlV6QA1F0fiC/8yGJKVJmrO+sg==
+"@sanity/client@^6.12.3", "@sanity/client@^6.12.4", "@sanity/client@^6.14.4", "@sanity/client@^6.15.0", "@sanity/client@^6.15.2", "@sanity/client@^6.15.3", "@sanity/client@^6.15.7":
+  version "6.15.7"
+  resolved "https://registry.npmjs.org/@sanity/client/-/client-6.15.7.tgz"
+  integrity sha512-WplOC9jSsqAUcIRm0Agpo38fQRLcYA0SA8yclmsr6lG84Q3uE27ZtyBPvd5+Hx5zzM8mRgdkhZ7yXR/EVGQkhA==
   dependencies:
     "@sanity/eventsource" "^5.0.0"
     "@vercel/stega" "0.1.0"
-    get-it "^8.4.10"
+    get-it "^8.4.15"
     rxjs "^7.0.0"
 
 "@sanity/code-input@^4.1.3":
@@ -1302,10 +1302,10 @@
   resolved "https://registry.npmjs.org/@sanity/color/-/color-2.2.5.tgz"
   integrity sha512-tTi22KoKuER3sldXYl4c1Dq2zU7tMLDkljFiaUKVkBbu4PBvRGCFw75kXZnD2b4Bsp6vin+7sI+AKdCKRhfRuw==
 
-"@sanity/core-loader@1.6.1":
-  version "1.6.1"
-  resolved "https://registry.npmjs.org/@sanity/core-loader/-/core-loader-1.6.1.tgz"
-  integrity sha512-0qaYuSYBiw2ml2c+CLJX7PCfVipsdU+PONZhQwjerivqpT2Fq5sZAMtdeiniMlvodgj8pS6S/XlsUfmHK91DqQ==
+"@sanity/core-loader@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.npmjs.org/@sanity/core-loader/-/core-loader-1.6.2.tgz"
+  integrity sha512-YWOaK0ffyrPdNcmF3S6tflvcbNirNMxQbTOuZFgV/Rw0Uc7lgtG3o/LgBPMLnWZH/hHbgTRoOPA6tfJf7+1Tvw==
   dependencies:
     async-cache-dedupe "2.1.0"
 
@@ -1512,12 +1512,12 @@
   dependencies:
     "@sanity/uuid" "3.0.2"
 
-"@sanity/react-loader@^1.9.3":
-  version "1.9.3"
-  resolved "https://registry.npmjs.org/@sanity/react-loader/-/react-loader-1.9.3.tgz"
-  integrity sha512-Ny4dLjKTy0Q4mpc5NthVNMZJ8XPEYGVvXwuvDr7fFJqy+KMW9WthJ+KUddTzuq129oJnmiFBvNO6HQvkBGgDMA==
+"@sanity/react-loader@^1.9.5":
+  version "1.9.5"
+  resolved "https://registry.npmjs.org/@sanity/react-loader/-/react-loader-1.9.5.tgz"
+  integrity sha512-PUe5/1omT/XovgtuB034X0ocrxXS+xT0RZ3ZpclEjgKCXxFEuHAkQeWKm9qlxWa2KrxPooFqO6v0fcEBTH8+cg==
   dependencies:
-    "@sanity/core-loader" "1.6.1"
+    "@sanity/core-loader" "1.6.2"
     fast-deep-equal "3.1.3"
 
 "@sanity/schema@3.30.1":
@@ -4607,7 +4607,7 @@ focus-lock@^1.3.2:
   dependencies:
     tslib "^2.0.3"
 
-follow-redirects@^1.15.4:
+follow-redirects@^1.15.6:
   version "1.15.6"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.6.tgz"
   integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
@@ -4803,14 +4803,14 @@ get-intrinsic@^1.1.1, get-intrinsic@^1.1.3, get-intrinsic@^1.2.1, get-intrinsic@
     has-symbols "^1.0.3"
     hasown "^2.0.0"
 
-get-it@^8.4.10:
-  version "8.4.10"
-  resolved "https://registry.npmjs.org/get-it/-/get-it-8.4.10.tgz"
-  integrity sha512-yFcSKM8qyGvycYPcnoQGYC3mxeUxXnlQnA+2DF5TyrEHWN2G5pirXylJX+/AyCQrpctEWu/163fS0g0tFnhYcw==
+get-it@^8.4.10, get-it@^8.4.15:
+  version "8.4.16"
+  resolved "https://registry.npmjs.org/get-it/-/get-it-8.4.16.tgz"
+  integrity sha512-NrdV3P0bI4Zh/R0GXIsY3da5mJUd1lT8hGcfwb3KU9E/ewnJ1e8YAWQycAtj3mxrjesBf8ZBq3TDKqyM8AJkJg==
   dependencies:
     debug "^4.3.4"
     decompress-response "^7.0.0"
-    follow-redirects "^1.15.4"
+    follow-redirects "^1.15.6"
     into-stream "^6.0.0"
     is-plain-object "^5.0.0"
     is-retry-allowed "^2.2.0"
@@ -8381,11 +8381,11 @@ shebang-regex@^3.0.0:
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
 side-channel@^1.0.4:
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/side-channel/-/side-channel-1.0.5.tgz"
-  integrity sha512-QcgiIWV4WV7qWExbN5llt6frQB/lBven9pqliLXfGPB+K9ZYXxDozp0wLkHS24kWCm+6YXH/f0HhnObZnZOBnQ==
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/side-channel/-/side-channel-1.0.6.tgz"
+  integrity sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==
   dependencies:
-    call-bind "^1.0.6"
+    call-bind "^1.0.7"
     es-errors "^1.3.0"
     get-intrinsic "^1.2.4"
     object-inspect "^1.13.1"

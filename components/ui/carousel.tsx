@@ -5,7 +5,7 @@ import useEmblaCarousel, {
  type UseEmblaCarouselType,
 } from "embla-carousel-react"
 
-import { IconCircleArrowRight, IconCircleArrowLeft } from '@tabler/icons-react';
+import { IconChevronRight, IconChevronLeft } from '@tabler/icons-react';
 
 import { cn } from "@/utils/cn"
 import { Button } from "@/components/ui/button"
@@ -210,7 +210,7 @@ const CarouselPrevious = React.forwardRef<
    variant={variant}
    size={size}
    className={cn(
-    "absolute  h-12 w-12 rounded-full md:flex hidden",
+    "absolute  h-8 w-8 rounded-full md:flex hidden",
     orientation === "horizontal"
      ? "-left-12 top-1/2 -translate-y-1"
      : "-top-12 left-1/2 -translate-x-1 rotate-90",
@@ -220,7 +220,7 @@ const CarouselPrevious = React.forwardRef<
    onClick={scrollPrev}
    {...props}
   >
-   <IconCircleArrowLeft className="h-6 w-6" />
+   <IconChevronLeft className="h-6 w-6" />
    <span className="sr-only">Previous slide</span>
   </Button>
  )
@@ -249,7 +249,7 @@ const CarouselNext = React.forwardRef<
    onClick={scrollNext}
    {...props}
   >
-   <IconCircleArrowRight className="h-6 w-6" />
+   <IconChevronRight className="h-6 w-6" />
    <span className="sr-only">Next slide</span>
   </Button>
  )
