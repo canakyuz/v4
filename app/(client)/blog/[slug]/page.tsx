@@ -111,7 +111,7 @@ const PostPage = async ({ params }: Props) => {
     {/* Image */}
     <Image src={postData.image} alt="" className="w-full object-cover z-0 border-2 border-violet-500 h-64 rounded-xl" height={500} width={500} />
     {/* Body */}
-    <div className='prose prose-base prose-slate max-w-full prose-code:ring-lightest dark:prose-invert prose-code prose:text-balance mx-auto w-screen'>
+    <div className='prose prose-base prose-slate prose-p:pl-8 max-w-full prose-code:ring-lightest dark:prose-invert prose-code prose:text-balance mx-auto w-screen'>
      <BlockContent
       blocks={postData.body}
       projectId="xxxxxxxx"

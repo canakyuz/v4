@@ -80,7 +80,7 @@ export default function About() {
         <li className="transition-opacity col-span-1" key={link.label}>
          <Link
           href={link.href}
-          className="no-underline w-full border rounded-lg p-4 border-lighter hover:border-primary transition-colors ease-in-out duration-300 inline-grid"
+          className="no-underline w-full rounded-lg border-[1.5px] hover:border-inner-4 p-4 border-lighter hover:border-primary transition-colors ease-in-out duration-300 inline-grid"
          >
           <div className="flex items-center gap-3">
            <span className="text-xl">{link.icon}</span>

@@ -15,7 +15,7 @@ export default function NewLink(props: LinkProps) {
   <NextLink
    {...rest}
    className={clsx(
-    "underline-offset-4 text-lighter hover:text-primary hover:underline transition-colors duration-200 ease-in-out",
+    "underline-offset-4 text-lighter hover:text-primary hover:underline hover:border-1 transition-colors duration-200 ease-in-out",
     (isExternal || underline) && "underline",
     props.className
    )}

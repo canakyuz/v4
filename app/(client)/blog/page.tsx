@@ -27,7 +27,10 @@ export default async function Home() {
       <div>
         <BentoGrid className="max-w-4xl mx-auto">
           {posts.map((b: Post, index: number) => (
-            <BentoGridItem className={index === 0 || index === 2 ? "md:col-span-2" : ""} key={index} props={b} />
+            <BentoGridItem
+              className={index === 3 || index === 6 ? "md:col-span-2" : ""}
+              key={index}
+              props={b} />
           ))}
         </BentoGrid>
       </div>
