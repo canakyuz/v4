@@ -256,6 +256,56 @@ const CarouselNext = React.forwardRef<
 })
 CarouselNext.displayName = "CarouselNext"
 
+const CarouselDots = React.forwardRef<
+ HTMLDivElement,
+ React.HTMLAttributes<HTMLDivElement>
+>((props, ref) => {
+ const { api } = useCarousel()
+ const [selectedIndex, setSelectedIndex] = React.useState(0)
+
+ React.useEffect(() => {
+  if (!api) {
+   return
+  }
+
+  const onSelect = () => {
+   setSelectedIndex(api.selectedScrollSnap())
+  }
+
+  onSelect()
+  api.on("select", onSelect)
+
+  return () => {
+   api.off("select", onSelect)
+  }
+ }, [api])
+
+ if (!api) {
+  return null
+ }
+
+ const arr = new Array(api.slideNodes().length).fill(0)
+
+ return (
+  <div ref={ref} className="flex gap-1 my-2 justify-center -translate-y-5 mt-8">
+   {arr.map((_, index) => {
+    const selected = index === selectedIndex
+    return (
+     <div
+      className={cn(
+       "h-[6px] w-[6px] rounded-full bg-primary",
+       {
+        "opacity-40": !selected,
+       }
+      )}
+      key={index}
+     ></div>
+    )
+   })}
+  </div>
+ )
+})
+
 export {
  type CarouselApi,
  Carousel,
@@ -263,4 +313,5 @@ export {
  CarouselItem,
  CarouselPrevious,
  CarouselNext,
+ CarouselDots,
 }

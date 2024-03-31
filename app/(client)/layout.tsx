@@ -36,7 +36,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className="antialiased bg-background m-0 transition duration-200 h-screen">
+      <body className="antialiased bg-background m-0 transition duration-200 h-full">
         <svg
           className="pointer-events-none fixed isolate z-50 dark:opacity-80 opacity-50 mix-blend-multiply dark:mix-blend-soft-light top-0 bottom-0 left-0 right-0 h-screen w-screen"
           width="screen"
@@ -56,9 +56,9 @@ export default function RootLayout({
             filter="url(#pedroduarteisalegend)"
           ></rect>
         </svg>
-        <main className="antialiased bg-background/10 max-w-4xl md:pt-12 pt-24 pb-0 mx-auto w-full tracking-wide h-screen">
+        <main className="antialiased max-w-4xl md:pt-12 pt-24 pb-0 mx-auto w-full tracking-wide h-full">
           <Providers>
-            <div className="flex flex-col justify-between h-full md:gap-12 gap-8 bg-background">
+            <div className="flex flex-col justify-between h-full md:gap-12 gap-8">
               {/* Navigation + Body */}
               <div>
                 <Navigation />
