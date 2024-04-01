@@ -65,6 +65,7 @@ export async function getProjects() {
   const data = await client.fetch(groq`*[_type == "project"] {
    ...,
    'image': image.asset->.url,
+    _id,
    title,
    slug,
    publishedAt,
@@ -83,6 +84,7 @@ export async function getPost(slug: string) {
     groq`*[_type=="post" && slug.current== $slug ][0]{
        ...,
        'image': image.asset->.url,
+       _id,
        title,
        body,
        style,
@@ -102,6 +104,7 @@ export async function getPosts() {
   const data = await client.fetch(groq`*[_type=="post"]{
        ...,
        'image': image.asset->.url,
+       _id,
        title,
        description,
        style,

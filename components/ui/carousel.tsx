@@ -9,6 +9,7 @@ import { IconChevronRight, IconChevronLeft } from '@tabler/icons-react';
 
 import { cn } from "@/utils/cn"
 import { Button } from "@/components/ui/button"
+import ClassNames from "classnames";
 
 type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
@@ -41,6 +42,7 @@ function useCarousel() {
  }
 
  return context
+
 }
 
 const Carousel = React.forwardRef<
@@ -153,29 +155,63 @@ const Carousel = React.forwardRef<
  }
 )
 Carousel.displayName = "Carousel"
+// Carousel bileşenlerindeki özelleştirilmiş hook
 
-const CarouselContent = React.forwardRef<
- HTMLDivElement,
- React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
- const { carouselRef, orientation } = useCarousel()
 
- return (
-  <div ref={carouselRef} className="overflow-hidden">
-   <div
-    ref={ref}
-    className={cn(
-     "flex",
-     orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-     className
-    )}
-    {...props}
-   />
-  </div>
- )
-})
+const CarouselContent = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+ ({ className, children, ...props }, ref) => {
+  const { carouselRef, orientation, api } = useCarousel()
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
+
+  React.useEffect(() => {
+   if (!api) {
+    return
+   }
+
+   const onSelect = () => {
+    setSelectedIndex(api.selectedScrollSnap())
+   }
+
+   onSelect()
+   api.on("select", onSelect)
+
+   return () => {
+    api.off("select", onSelect)
+   }
+  }, [api])
+
+  return (
+   <div ref={carouselRef} className="overflow-hidden">
+    <div
+     ref={ref}
+     className={cn(
+      "flex",
+      orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+      className
+     )}
+     {...props}
+    >
+     {React.Children.map(children, (child, index) => {
+      const selected = index === selectedIndex
+      return (
+       <CarouselItem
+        className={cn("opacity-20 duration-150", {
+         "opacity-100 duration-150": selected,
+        })}
+       >
+        {child}
+       </CarouselItem>
+      )
+     })}
+    </div>
+   </div>
+  )
+ })
 CarouselContent.displayName = "CarouselContent"
 
+
+
+/* Aktif olmayan carousel itemleri için opacity %30 yapmak istiyorum. */
 const CarouselItem = React.forwardRef<
  HTMLDivElement,
  React.HTMLAttributes<HTMLDivElement>
@@ -188,13 +224,14 @@ const CarouselItem = React.forwardRef<
    role="group"
    aria-roledescription="slide"
    className={cn(
-    "min-w-0 shrink-0 grow-0 md:basis-3/6 basis-full",
+    "min-w-0 mx-auto shrink-0 grow-0 md:basis-4/5 basis-full h-full",
     orientation === "horizontal" ? "pl-4" : "pt-4",
     className
    )}
    {...props}
   />
  )
+
 })
 CarouselItem.displayName = "CarouselItem"
 
@@ -287,13 +324,13 @@ const CarouselDots = React.forwardRef<
  const arr = new Array(api.slideNodes().length).fill(0)
 
  return (
-  <div ref={ref} className="flex gap-1 my-2 justify-center -translate-y-5 mt-8">
+  <div ref={ref} className="flex gap-1 my-2 justify-center -translate-y-5 mt-6">
    {arr.map((_, index) => {
     const selected = index === selectedIndex
     return (
      <div
       className={cn(
-       "h-[6px] w-[6px] rounded-full bg-primary",
+       "h-[6px] w-[6px] rounded-full border-primary md:border-[1.6px] border-[1px] cursor-pointer hover:border-primary active:border-primary",
        {
         "opacity-40": !selected,
        }

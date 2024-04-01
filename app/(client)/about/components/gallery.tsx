@@ -43,7 +43,7 @@ function Photo({
   const shared = "absolute h-full w-full rounded-2xl overflow-hidden";
   return (
     <motion.div
-      className={`absolute mx-auto cursor-grab hover:before:block hover:before:w-[calc(100%+55px)] hover:before:h-[300px] hover:before:absolute hover:before:-top-8 hover:before:-left-7`}
+      className={`absolute mx-auto cursor-grab rounded-2xl hover:before:block hover:before:w-[calc(100%+55px)] hover:before:h-[300px] hover:before:absolute hover:before:-top-8 hover:before:-left-7`}
       style={{ rotate: `${rotate}deg`, left, width, height, perspective: 1000 }}
       initial={{
         width,

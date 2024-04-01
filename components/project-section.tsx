@@ -13,6 +13,7 @@ import {
  CarouselPrevious,
 } from "@/components/ui/carousel"
 import Section from './section';
+import { project } from '@/sanity/schemas/project';
 
 
 type Props = {
@@ -24,23 +25,22 @@ export const revalidate = 60;
 const ProjectSection: React.FC<Props> = ({ projects }) => {
 
  return (
-  <Section heading="Projects" headingAlignment='left'>
+  <Section heading="Projects" headingAlignment='left' link='/project'>
    <section className='animate-in'>
     <Carousel
      className="w-full"
      opts={
       {
        slidesToScroll: 1,
-       loop: true,
        inViewThreshold: 0.5,
        containScroll: "trimSnaps",
        align: "center",
       }
      }>
-     <CarouselContent className="-mx-1 md:px-3">
+     <CarouselContent key="unique-key" className="-ml-1 md:px-3">
       {projects.map((project: Project, index: number) => (
-       <CarouselItem key={project.id} className="p-2 my-1">
-        <Card key={project.id} props={project} />
+       <CarouselItem key={project._id} className="p-2 my-1">
+        <Card props={project} />
        </CarouselItem>
       ))}
      </CarouselContent>

@@ -36,7 +36,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </head>
-      <body className="antialiased bg-background m-0 transition duration-200 h-full">
+      <body className="antialiased bg-background m-0 transition duration-200 h-screen">
         <svg
           className="pointer-events-none fixed isolate z-50 dark:opacity-80 opacity-50 mix-blend-multiply dark:mix-blend-soft-light top-0 bottom-0 left-0 right-0 h-screen w-screen"
           width="screen"

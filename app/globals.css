@@ -37,10 +37,10 @@
     --badgeJade: #00c781;
 
     /* ! Badge Background */
-    --badgeAmberBg: #fff5e5;
-    --badgeCyanBg: #e5f7ff;
+    --badgeAmberBg: #f5a62330;
+    --badgeCyanBg: #00b8d930;
     --badgeRubyBg: #ff5a5f30;
-    --badgeJadeBg: #e5fff0;
+    --badgeJadeBg: #00c78130;
 
     --prim: #f9f9fb;
     --sec: #e8e8ec;
@@ -82,10 +82,10 @@
   --badgeJade: #00c781;
 
   /* ! Badge Background */
-  --badgeAmberBg: #fff5e5;
-  --badgeCyanBg: #e5f7ff;
+  --badgeAmberBg: #f5a62330;
+  --badgeCyanBg: #00b8d930;
   --badgeRubyBg: #ff5a5f30;
-  --badgeJadeBg: #e5fff0;
+  --badgeJadeBg: #00c78130;
 
   --prim: #f9f9fb;
   --sec: #e8e8ec;

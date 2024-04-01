@@ -1,11 +1,10 @@
 "use client";
+
 import { Post } from '@/utils/interface';
 import * as React from "react";
 
 import { Card } from "@/components/ui/card";
-
-import ClassNames from "classnames";
-import { EmblaPluginType } from 'embla-carousel'
+import Section from './section';
 
 import {
  Carousel,
@@ -15,41 +14,39 @@ import {
  CarouselPrevious,
  CarouselDots
 } from "@/components/ui/carousel";
-import Section from './section';
-import { plugin } from 'postcss';
-import useEmblaCarousel from 'embla-carousel-react'
 
 type Props = {
  posts: Post[];
 };
 
-type PropType = {
- plugins?: EmblaPluginType[]
-}
-
-export const revalidate = 60;
-
 const BlogSection: React.FC<Props> = ({ posts }) => {
+ const [selectedPostIndex, setSelectedPostIndex] = React.useState(0);
+
+ const handlePostSelect = (index: number) => {
+  setSelectedPostIndex(index);
+ };
+
  return (
-  <Section heading="Blog" headingAlignment='left'>
+  <Section heading="Blog" headingAlignment='left' link='/blog'>
    <div className='animate-in'>
     <Carousel
      className="w-full"
-     opts={
-      {
-       slidesToScroll: 1,
-       loop: true,
-       inViewThreshold: 0.5,
-       containScroll: "trimSnaps",
-       align: "center",
-      }
-     }
-
+     opts={{
+      slidesToScroll: 1,
+      inViewThreshold: 0.6,
+      containScroll: "trimSnaps",
+      align: "center",
+      startIndex: 0,
+     }}
     >
-     <CarouselContent className="-mx-1 md:px-3">
+     <CarouselContent key="unique-key" className="-ml-1 md:px-3">
       {posts.map((post: Post, index: number) => (
-       <CarouselItem key={post.id} className="p-2 my-1">
-        <Card key={index} props={post} />
+       <CarouselItem
+        key={post._id}
+        className="p-2 my-1"
+        onClick={() => handlePostSelect(index)}
+       >
+        <Card props={post} />
        </CarouselItem>
       ))}
      </CarouselContent>

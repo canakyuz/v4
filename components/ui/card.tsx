@@ -47,7 +47,11 @@ export const Card = ({ props, className }: BentoGridItemProps) => {
      {/* Badge */}
      <div className="flex flex-wrap">
       {tagsOrSkills.map((item: Tag | Skill, index: number) => (
-       <Badge key={index} className="mt-2 mr-2">{`#${item.name}`}</Badge>
+       <Badge
+        key={index}
+        className="mt-2 mr-2"
+        variant={isPost ? "ruby" : "cyan"}
+       >{`# ${item.name}`}</Badge>
       ))}
      </div>
     </div>
