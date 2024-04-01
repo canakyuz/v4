@@ -51,7 +51,7 @@ export default function About() {
     <div className="md:flex hidden flex-row justify-between">
      <Gallery />
     </div>
-    <Section heading="About" headingAlignment="left">
+    <Section heading="About" headingAlignment="left" link='/'>
      <div className="flex flex-col gap-4 text-light">
       <p>
        Hi, I&apos;m Can Akyuz, currently based in Izmir. I&apos;m a software engineer and designer actively seeking new opportunities in the New York City.
@@ -66,7 +66,7 @@ export default function About() {
 
      </div>
     </Section>
-    <Section heading="Connect" headingAlignment="left">
+    <Section heading="Connect" headingAlignment="left" link='/'>
      <div className="flex flex-col w-full gap-8">
       <p className="text-light">
        Have a question or just want to chat? Feel free to{" "}
