@@ -39,4 +39,6 @@ const ThemeSwitch: React.FC = React.memo(() => {
  );
 });
 
+ThemeSwitch.displayName = 'ThemeSwitch';
+
 export default ThemeSwitch;
