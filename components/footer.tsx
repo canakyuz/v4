@@ -1,13 +1,10 @@
-"use client";
+"use client"
 
 import Link from "next/link";
-import { Badge } from "./ui/badge";
-
-
 
 const Footer = () => {
  return (
-  <footer className="flex flex-col max-w-4xl md:py-6 py-3 md:gap-4 gap-2 text-light font-body md:text-sm text-xs px-6 bg-card animate-in">
+  <footer className="flex flex-col max-w-4xl md:py-6 py-3 md:gap-4 gap-2 text-light font-body md:text-sm text-xs px-6 animate-in bg-card">
    <div className="flex flex-row gap-3 ">
     <Link className="hover:text-ruby hover:underline" href="/about">About</Link>
     <Link className="hover:text-ruby hover:underline" href="/blog">Blog</Link>

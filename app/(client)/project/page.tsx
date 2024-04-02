@@ -19,7 +19,6 @@ export const revalidate = 60;
 
 export default async function Home() {
   const projects: Project[] = await getProjects();
-  console.log(projects, "projects");
 
   return (
     <div>

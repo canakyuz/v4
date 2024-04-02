@@ -29,7 +29,7 @@ export const Card = ({ props, className }: BentoGridItemProps) => {
     className
    )}>
     <Image
-     className="rounded-lg object-cover h-48 w-full object-center"
+     className="rounded-lg object-cover h-72 w-full object-center"
      src={props.image}
      width={300}
      height={300}
