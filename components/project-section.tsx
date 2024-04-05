@@ -1,6 +1,6 @@
 "use client";
+
 import { Project } from '@/utils/interface'
-import SubHeader from "./ui/sub-header";
 import * as React from "react"
 
 import { Card } from "@/components/ui/card"
@@ -23,6 +23,11 @@ type Props = {
 export const revalidate = 60;
 
 const ProjectSection: React.FC<Props> = ({ projects }) => {
+ const [selectedProjectIndex, setSelectedProjectIndex] = React.useState(0);
+
+ const handleProjectSelect = (index: number) => {
+  setSelectedProjectIndex(index);
+ };
 
  return (
   <Section heading="Projects" headingAlignment='left' link='/project'>
@@ -39,7 +44,11 @@ const ProjectSection: React.FC<Props> = ({ projects }) => {
      }>
      <CarouselContent key="unique-key" className="-ml-1 md:px-3">
       {projects.map((project: Project, index: number) => (
-       <CarouselItem key={project._id} className="p-2 my-1">
+       <CarouselItem
+        key={project._id}
+        className="p-2 my-1"
+        onClick={() => handleProjectSelect(index)}
+       >
         <Card props={project} />
        </CarouselItem>
       ))}
