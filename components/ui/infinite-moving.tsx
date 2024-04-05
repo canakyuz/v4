@@ -89,7 +89,7 @@ export const InfiniteMoving = ({
             >
                 {items.map((item) => (
                     <li
-                        className="relative flex flex-row shrink-0 items-center max-w-full text-light hover:text-primary transition-colors duration-200 snap-start"
+                        className="relative flex flex-row shrink-0 items-center max-w-full text-light hover:text-primary transition-colors snap-start"
                         key={item.label}
                     >
                         <a href={item.href} target="_blank">
