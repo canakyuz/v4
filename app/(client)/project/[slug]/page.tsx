@@ -114,7 +114,32 @@ const ProjectPage: React.FC<Props> = async ({ params }: Props) => {
           width={500}
         />
         {/* Body */}
-        <div className='prose prose-base prose-slate max-w-full prose-code:ring-lightest dark:prose-invert prose-code prose:text-balance mx-auto w-screen'>
+        <div className='
+            prose
+            prose-base
+            prose-slate
+            md:prose-h1:pl-0
+            md:prose-h2:pl-3
+            md:prose-h3:pl-6
+            md:prose-h4:pl-9
+            md:prose-h5:pl-12
+            md:prose-p:pl-16
+            md:prose-ol:pl-16
+            md:prose-ul:pl-20
+            max-w-full
+            prose-h1:pl-0
+            prose-h2:pl-1
+            prose-h3:pl-2
+            prose-h4:pl-3
+            prose-h5:pl-4
+            prose-p:pl-5
+            prose-ol:pl-9
+            prose-ul:pl-9
+            dark:prose-invert
+            prose-code
+            prose-p:text-sm
+            prose-li:text-sm
+            mx-auto w-screen'>
           <BlockContent
             blocks={projectData.body}
             projectId='xxxxxxxx'
