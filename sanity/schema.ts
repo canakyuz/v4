@@ -1,3 +1,4 @@
+// sanity/schema.ts
 import { type SchemaTypeDefinition } from "sanity";
 import { tag } from "./schemas/tags";
 import { post } from "./schemas/post";
