@@ -56,7 +56,7 @@ export default function RootLayout({
             filter="url(#pedroduarteisalegend)"
           ></rect>
         </svg>
-        <main className="antialiased max-w-4xl md:pt-12 pt-24 pb-0 mx-auto w-full tracking-wide h-lvh">
+        <main className="antialiased max-w-3xl md:pt-12 pt-24 pb-0 mx-auto w-full tracking-wide h-lvh">
           <ThemeProviders>
             <div className="flex flex-col justify-between h-lvh md:gap-12 gap-8">
               {/* Navigation + Body */}

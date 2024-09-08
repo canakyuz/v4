@@ -51,7 +51,7 @@ export const post = {
       type: "array",
       of: [
         {
-          type: "block",
+          type: "span",
           marks: {
             annotations: [
               {
@@ -136,15 +136,20 @@ export const post = {
           fields: [{ type: "text", name: "alt", title: "Alt" }],
         },
         {
-          name: "code",
-          title: "Code Block",
           type: "code",
+          name: "myCodeField",
+          title: "Code with all options",
           options: {
-            language: "sh",
-            theme: "material",
+            languageAlternatives: [
+              { title: "Javascript", value: "javascript" },
+              { title: "HTML", value: "html" },
+              { title: "CSS", value: "css" },
+              { title: "TypeScript", value: "typescript" },
+              { title: "Python", value: "python" }
+            ],
+            theme: "duotoneDark",
+            withFilename: true,
           },
-          withFilename: true,
-          highlightedLines: true,
         },
       ],
     },
@@ -153,12 +158,6 @@ export const post = {
       title: "Tags",
       type: "array",
       of: [{ type: "reference", to: [{ type: "tag" }] }],
-    },
-    {
-      name: "style",
-      title: "ClassNames",
-      type: "string",
-      description: "Add class names for styling",
     },
   ],
 };

@@ -12,6 +12,7 @@ import { schema } from "./sanity/schema";
 import { codeInput } from "@sanity/code-input";
 import { table } from "@sanity/table";
 import { markdownSchema } from "sanity-plugin-milkdown";
+import { latexInput } from "sanity-plugin-latex-input";
 
 export default defineConfig({
   schema,
@@ -23,9 +24,8 @@ export default defineConfig({
     codeInput(),
     structureTool(),
     markdownSchema({}),
-    // Vision is a tool that lets you query your content with GROQ in the studio
-    // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
     table(),
+    latexInput()
   ],
 });

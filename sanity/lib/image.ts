@@ -9,5 +9,10 @@ const imageBuilder = createImageUrlBuilder({
 });
 
 export const urlFor = (source: Image) => {
-  return imageBuilder?.image(source).auto("format").fit("max");
+  try {
+    return imageBuilder?.image(source).auto("format").fit("max");
+  } catch (error) {
+    console.error("Error generating image URL:", error);
+    return ""; // Fallback URL or handling logic
+  }
 };
